@@ -1,0 +1,34 @@
+.Registerbody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+    height: 500px;
+    align-items: center;
+}
+.Registerbody form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 80%;
+    background-image: url(https://image.shutterstock.com/image-vector/abstract-grey-background-poster-dynamic-600w-1730824312.jpg);
+    background-color: white;
+    padding: 15px ;
+    box-shadow: 2px 2px 2px;
+    border-bottom: solid #17a5e9 5px;
+}
+form input{
+    padding: 8px;
+    margin: 8px 0;
+    background-color: #f8f8f8;
+    border: 1px solid #f8f8f8;
+    box-shadow: 2px 2px 2px;
+    border-radius: 10px;
+}
+form button{
+    padding: 8px;
+    margin: 8px 0;
+    box-shadow: 2px 2px 2px;
+    border-radius: 10px;
+    border: 1px solid #f8f8f8;
+}

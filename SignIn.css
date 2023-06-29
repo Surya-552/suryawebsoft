@@ -1,0 +1,53 @@
+.signinbody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    margin-top: 40px;
+    margin-bottom:40px;
+    align-items: center;
+}
+.signinbody form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 80%;
+    background-image: url(https://cdn.pixabay.com/photo/2016/03/02/07/36/abstract-1231889__340.jpg);
+    background-color: white;
+    padding: 15px ;
+    box-shadow: 2px 2px 2px;
+    border-bottom: solid #17a5e9 5px;
+    color: white;
+    font-size: 20px;
+}
+form input{
+    padding: 8px;
+    margin: 8px 0;
+    background-color: #f8f8f8;
+    border: 1px solid #f8f8f8;
+    box-shadow: 2px 2px 2px;
+    border-radius: 10px;
+}
+form button{
+    padding: 8px;
+    margin: 8px 0;
+    box-shadow: 2px 2px 2px;
+    border-radius: 10px;
+    border: 1px solid #f8f8f8;
+    background-color: deepskyblue;
+    color: white;
+}
+#submit{
+    padding: 8px;
+    margin: 8px 0;
+    box-shadow: 2px 2px 2px;
+    border-radius: 10px;
+    border: 1px solid #f8f8f8;
+    background-color: deepskyblue;
+    color: white;
+    font-size: 20px;
+    height: 50px;
+}
+#submit:hover{
+    background-color: orangered;
+}

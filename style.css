@@ -1,0 +1,238 @@
+
+    :root{
+        background-image: url(img/surya-1.png);
+        background-size: cover;
+        border: 100px solid transparent;
+         border-image: url(img/border.png) 15% round;
+         z-index: 1;
+    }
+    .Main_box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;   
+    }
+        .circle{
+             background-color:transparent;
+            float: left;
+           margin: -80px;
+            width: 30vh;
+            height: 40vh;
+            
+            overflow: hidden;
+            position: initial;
+            display: flex;
+        }
+        .circle2{
+            border-radius: 50%;
+            background-image: url(/img/H1.png);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: flex;
+            float: left;
+            width: 32vh;
+            height: 32vh;
+            margin-top: -10%;
+            margin-left: -15%;
+            z-index: 4;
+            border: 4px dashed #fc778d;
+            position: initial;
+        }
+        @media only screen and (max-width: 600px){
+            .circle{
+                display: none;
+            }
+        }
+        /* animated box */
+        
+
+        .container{
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content h2{ font-size:19px;}
+
+.box{
+ position: absolute;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: #111845a6;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(23, 32, 90);
+  border: 2px solid #2a3cad;
+  color: white;
+  padding: 20px;
+  z-index: 99;
+  margin-top: -10vh;
+}
+
+
+.box:before{
+  content: '';
+  position:absolute;
+  top:0;
+  width:100%;
+  height:100%;
+  background: rgba(255,255,255,0.1);
+  transition:0.5s;
+  pointer-events: none;
+}
+
+.box:hover:before{
+  left:-50%;
+  transform: skewX(-5deg);
+}
+
+
+.box .content{
+  position:absolute;
+  top:15px;
+  left:15px;
+  right:15px;
+  bottom:15px;
+  border:1px solid #f0a591;
+  padding:20px;
+  text-align:center;
+  box-shadow: 0 5px 10px rgba(9,0,0,0.5);
+  
+}
+
+.box span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  
+}
+
+.box span:nth-child(1)
+{
+  transform:rotate(0deg);
+}
+
+.box span:nth-child(2)
+{
+  transform:rotate(90deg);
+}
+
+.box span:nth-child(3)
+{
+  transform:rotate(180deg);
+}
+
+.box span:nth-child(4)
+{
+  transform:rotate(270deg);
+}
+
+.box span:before
+{
+  content: '';
+  position: absolute;
+  width:100%;
+  height: 2px;
+  background: #50dfdb;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+  transform:scaleX(0);
+  transform-origin: left;
+  }
+  50%
+  {
+    transform:scaleX(1);
+  transform-origin: left;
+  }
+  50.1%
+  {
+    transform:scaleX(1);
+  transform-origin: right;
+    
+  }
+  
+  100%
+  {
+    transform:scaleX(0);
+  transform-origin: right;
+    
+  } 
+}
+.images{
+    width: 200px;
+  height: 220px;
+} 
+/* block animation */
+.block {
+  position: relative;
+  width: 200px;
+  height: 220px;
+  z-index: 1;
+ background: azure;
+}
+
+
+.block:before, .block:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+    #0000ff, #00ff00,#ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.block:after {
+  filter: blur(50px);
+}
+.img_box{
+    position: relative;
+    border: 30px solid transparent;
+    border-image: url(img/border3.png) 30% round;
+  width: 200px;
+  height: 220px;
+  z-index: 1;
+}
+@media only screen and (max-width: 600px){
+            #block1{
+                margin-top: 20%;
+            }
+        }
+marquee{
+    font-size: 40px;
+}
+@media only screen and (max-width: 700px) {
+    #Up_dwn1,#Up_dwn2{
+        display: none;
+    }
+  #Up_dwn1{
+    margin-top: 100vh;
+  }
+}

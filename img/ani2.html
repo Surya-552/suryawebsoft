@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body{
+  border: 100px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 20% round;
+  z-index: 99;
+  background-image: url(surya-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.block {
+  position: relative;
+  width: 200px;
+  height: 220px;
+ background: azure;
+}
+
+
+.block:before, .block:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+    #0000ff, #00ff00,#ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.block:after {
+  filter: blur(50px);
+}
+.container{
+  width: 100%;
+  height: 160vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.background-img{
+
+}
+.content h2{ font-size:19px;}
+
+.box{
+ position: absolute;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: #111845a6;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(23, 32, 90);
+  border: 2px solid #2a3cad;
+  color: white;
+  padding: 20px;
+  z-index: 99;
+}
+
+.box:before{
+  content: '';
+  position:absolute;
+  top:0;
+  width:100%;
+  height:100%;
+  background: rgba(255,255,255,0.1);
+  transition:0.5s;
+  pointer-events: none;
+}
+
+.box:hover:before{
+  left:-50%;
+  transform: skewX(-5deg);
+}
+
+
+.box .content{
+  position:absolute;
+  top:15px;
+  left:15px;
+  right:15px;
+  bottom:15px;
+  border:1px solid #f0a591;
+  padding:20px;
+  text-align:center;
+  box-shadow: 0 5px 10px rgba(9,0,0,0.5);
+  
+}
+
+.box span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  
+}
+
+.box span:nth-child(1)
+{
+  transform:rotate(0deg);
+}
+
+.box span:nth-child(2)
+{
+  transform:rotate(90deg);
+}
+
+.box span:nth-child(3)
+{
+  transform:rotate(180deg);
+}
+
+.box span:nth-child(4)
+{
+  transform:rotate(270deg);
+}
+
+.box span:before
+{
+  content: '';
+  position: absolute;
+  width:100%;
+  height: 2px;
+  background: #50dfdb;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+  transform:scaleX(0);
+  transform-origin: left;
+  }
+  50%
+  {
+    transform:scaleX(1);
+  transform-origin: left;
+  }
+  50.1%
+  {
+    transform:scaleX(1);
+  transform-origin: right;
+    
+  }
+  
+  100%
+  {
+    transform:scaleX(0);
+  transform-origin: right;
+    
+  } 
+}
+.images{
+    width: 200px;
+  height: 220px;
+} 
+marquee{
+  font-size: 48px;
+}
+@media only screen and (max-width: 500px) {
+	  #Up_dwn1,#Up_dwn2{
+		  display: none;
+	  }
+    #Up_dwn1{
+      margin-top: 100vh;
+    }
+  }
+    </style>
+</head>
+<body>
+  <marquee style="z-index:7;position:absolute;margin-top:-100px;height:170vh;margin-left: -50px;" scrollamount="10" direction="up" behavior="alternate" onmouseover="this.stop();" onmouseout="this.start();"><div class="block" id="Up_dwn1" ><img class="images" src="/back.jpeg"  alt=""></div></marquee>
+  <marquee style="z-index:3;position:absolute;margin-top:-50px;height:160vh;" scrollamount="10" direction="right" behavior="alternate"><div class="block"></div></marquee>
+  <marquee style="z-index:4;position:absolute;margin-top:120vh;height:160vh;" scrollamount="10" direction="right" behavior="alternate"><div class="block"></div></marquee>
+  <marquee style="z-index:5;position:absolute;margin-left:60%;height:170vh;margin-top: -100px;" scrollamount="10" direction="up" behavior="alternate"><div class="block" id="Up_dwn2"></div></marquee>
+  <marquee style="z-index:6;position:absolute;margin:30px;height:160vh;" scrollamount="10" direction="up" behavior="alternate"></marquee>
+  <marquee style="z-index:7;position:absolute;margin-left:2%;top:10%;height:160vh;" scrollamount="6" direction="down"><img src="/Picture1.png" width="80px" alt=""></marquee>
+
+  <marquee style="z-index:8;position:absolute;margin-left:68%;top:24%;height:160vh;" direction="up"><img src="/Picture7.png" width="80px" alt=""></marquee>
+  
+  <marquee style="z-index:9;position:absolute;margin-left:41%;top:22%;height:82px;" direction="down">💖</marquee>
+  
+  <marquee style="z-index:10;position:absolute;margin-left:56%;top:2%;height:160vh;" scrollamount="3" direction="up"><img src="/Picture12.png" width="80px" alt=""></marquee>
+  
+  <marquee style="z-index:11;position:absolute;margin-left:42%;top:15%;height:334px;" direction="down">🎊 🎈</marquee>
+  
+  <marquee style="z-index:2;position:absolute;margin-left:30%;height:160vh;" scrollamount="7" direction="up"><img src="/Picture13.png" width="80px" alt=""> </marquee>
+  
+  <marquee style="z-index:12;position:absolute;margin-left:45%;top:18%;height:160vh;" scrollamount="7" direction="up"><img src="/Picture14.png" width="80px" alt=""></marquee>
+  
+  <marquee style="z-index:3;position:absolute;margin-left:22%;top:26%;height:12px;" scrollamount="7" direction="down">😍</marquee>
+  
+  <marquee style="z-index:5;position:absolute;margin-left:25%;top:33%;height:435px;" scrollamount="3" direction="down">😊</marquee>
+  
+  <marquee style="z-index:1;position:absolute;margin-left:8%;top:29%;height:160vh;" scrollamount="1" direction="down"><img src="/Picture1.png" width="80px" alt=""></marquee>
+  
+  <marquee style="z-index:2;position:absolute;margin-left:50%;top:17%;height:289px;" scrollamount="7" direction="down">💝</marquee> 
+  <marquee style="z-index:6;position:absolute;margin-left:76%;top:17%;height:160vh;" scrollamount="5" direction="down"><img src="/Picture11.png" width="80px" alt=""></marquee>
+  <div class="container">
+    <div class="background-img">
+      <div class="box">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="content">
+          <h2>My animated Border </h2>
+          <p><a>All our modules are designed to play nicely with responsive of course. At the end of the day it comes down to the theme you use - our code doesn't get in your way.</a></p>
+        </div>
+        
+      </div>
+    </div>
+  </div>   
+    
+</body>
+</html>

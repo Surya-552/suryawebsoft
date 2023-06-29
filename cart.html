@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="nav_footer.css">
+<link rel="stylesheet" href="cart.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021172835390774"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <script src="NavBaar.js"></script>
+    <h2 style="text-align: center;font-size: 34px;font-style: italic;font-family: 'Times New Roman', Times, serif;color:crimson">Shoping Cart</h2>     
+      
+    
+    <div class="conatiner">
+        <div class="col-2">
+        </div>
+        <div class="col-1">
+        </div>
+    </div>
+    
+    <script>
+   let cartItem = localStorage.getItem("cartItem") ? JSON.parse(localStorage.getItem("cartItem")) : [];
+
+function deleteItem(id) {
+    let remaningItem = cartItem.filter(item => item.id != id);
+    localStorage.setItem("cartItem", JSON.stringify([...remaningItem]));
+    document.location.reload();
+}
+const col2 = document.querySelector(".col-2");
+let i = 0;
+let price = 0;
+
+for (i = 0; i < cartItem.length; i++) {
+    let cartItemHolder = document.createElement('div');
+    let product = cartItem[i];
+    let goto = `showproduct.html?id=${product.id}`;
+    col2.appendChild(cartItemHolder);
+    let p=0;
+         p=p+(product.price*product.qty);
+    cartItemHolder.innerHTML = `  <div class='row'>
+               <img src=${product.imgUrl} />
+              <a href=${goto}>${product.name}</a>
+             <span>Price :&#8377; ${(p)} </span>
+             <span>Quantity : ${product.qty} </span>
+              <button onclick="deleteItem(${product.id})">Delete</button>
+              </div>`;
+    price += p;
+}
+if (cartItem.length > 0) {
+    const qty = cartItem.length;
+    const col1 = document.querySelector('.col-1');
+    col1.innerHTML = `<div class="action">
+            Subtotal :- ${qty} items :&#8377; ${price}
+            <div>
+                <a href='SignIn.html'>
+                <button>Proceed to Checkout</button>
+                </a>
+            </div>
+        </div>
+          `;
+}
+if (cartItem.length == 0) {
+    const link = document.createElement('p');
+    document.body.appendChild(link);
+    link.innerHTML = `<p style="text-align:center">Your cart is empty <a href='Product.html'>Go Shopping</a></p>
+          `;
+}
+const counter = document.querySelector('.counter');
+counter.innerHTML = cartItem.length;
+</script>
+    
+    <script src="Footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+.btn1{
+    display: inline-block;
+    background: #ff523b;
+    color: white;
+    padding: 8px 30px;
+   
+    border-radius: 30px;
+    text-decoration: none;
+}
+.productcontaner{
+    padding: 10px;
+}
+.img-col{
+    height: 300px;
+    max-width: 300px;
+    border: 1px solid rgb(141, 124, 124);
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    overflow: hidden;
+}
+.img-col img{
+    width: 250px;
+height: auto;
+}
+
+.productcontaner input{
+    width: 50px;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid orange;
+}
+input:focus{
+    outline: none;
+}
+.smallimg{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 200px;
+    width: 260px;
+    margin-top:10px;
+    
+}
+.smallimg-col {
+    padding: 0;
+   
+}
+.smallimg-col ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+
+}
+.smallimg-col1{
+    width: 250px;
+    justify-content: space-between;
+    display: flex;
+}
+.smallimg-col1 button{
+    margin-left: 5px;
+
+}
+.smallimg-col ul li{
+    margin-left: 2px;
+    margin-right: 10px;
+}
+.smallimg-col ul li p{
+    font-weight: bold;
+    font-size: 14px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ 
+}
+.col-2{
+    margin-left: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+input{
+    margin-left: 40px;
+}

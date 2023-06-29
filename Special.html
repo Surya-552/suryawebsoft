@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YARRI!</title>
+        <link rel="icon" href="img/Picture11.png" type="image/gif" />
+
+    <link rel="stylesheet" href="css/quiz.css">
+    <style>
+        :root{
+    background-color: #ecf5ff;
+    font-size: 65%;
+    background-image: url("img/surya-1.png");
+   
+}
+*{
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+h1,
+h2,
+h3,
+h4{
+    margin-bottom: 1rem;
+}
+h1{
+    font-size: 5.4rem;
+    color: rgb(8, 179, 231);
+    margin-bottom: 5rem;
+}
+h1>span{
+    font-size: 2.4rem;
+    font-weight: 500;
+
+}
+
+h3
+{
+    font-size: 2.8rem;
+    font-weight: 500;
+    color:red;
+}
+/*uti*/
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+    width: 100%;  
+ 
+}
+.container > *
+{
+    width: 100%;  
+    min-width: 310px;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text-center{   
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
+.btn
+{
+    background-color: orangered;
+    margin-top: 10px;
+    padding: 10px;
+    width: 260px;
+    text-align: center;
+    color: white;
+    border: 1px solid black;
+    display: inline-block;
+    font-size: 20px;
+}
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(55, 229, 241);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    margin-bottom: 1rem;
+    width: 260px;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86,185,235, 0.5);
+
+}
+input ::placeholder {
+    color: rgb(110, 104, 104);
+}
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="flex" id="end">
+<h3 >Your Name</h3>
+  <h1 id="finalScore">
+                
+            </h1>
+<form name="myform" action="/harshi.html">
+    <input 
+    type="text" 
+    name="username" 
+    id="username"
+    placeholder="username"
+    />
+    <input 
+    type="submit" 
+    value="submit"
+    onclick="result()"
+    class="btn" id="saveScoreBtn"
+    />  
+</form>
+
+</div>
+
+    </div>
+    
+    
+    <script > 
+    function result(){
+        var name=document.getElementById('username').value;
+        localStorage.setItem("username",name)
+    }
+    </script>
+</body>
+</html>

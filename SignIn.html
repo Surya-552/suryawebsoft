@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="nav_footer.css">
+<link rel="stylesheet" href="SignIn.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021172835390774"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <script src="NavBaar.js"></script>
+    <h2 style="text-align: center;font-size: 34px;font-style: italic;font-family: 'Times New Roman', Times, serif;color:crimson">Sign In</h2>     
+    <div class="signinbody">
+      <p id="alrt" style="color: red;"></p>
+        <form  method="POST" name="f1">
+          <h2 style="text-align: center;">Sign In</h2>
+          <label > Email</label>
+          <input id="id1" name="mail" type="email" placeholder="email"/>
+          <label >Password</label>
+          <input id="id2" name="psd" type="password" placeholder="password"/>
+          <input type="button"  id="submit" value="Submit" onclick="matchuser()" >
+          <p style="margin-bottom: 40px;">New User ?<a style="color:white;text-decoration: none;" href="Register.html">Register</a></p>
+        </form>
+  
+  </div>
+  <script>
+    const mail=document.getElementById("id1");
+    const psd=document.getElementById("id2");
+    const highScoreList = document.getElementById("highScoreList");
+const outdata= JSON.parse(localStorage.getItem("score"))||[];
+
+let arr=new Array(1);
+arr=outdata;
+onc
+function matchuser(){
+  let x=arr["EmailId"],y=arr["Password"],n=arr["name"];
+  const alrt=document.getElementById("alrt");
+let a=document.f1.mail.value ,b=document.f1.psd.value;
+    if(x==a&&y==b){
+      alert ("Hi "+n+"! Login successfully");
+window.location ="user.html";
+return false;
+    }
+    else{
+      alrt.innerHTML=`Invailid User!`;
+     alrt.appendChild(alrt);
+     
+return false;
+    }
+    
+  }
+
+highScoreList.innerHTML=`<li>${x}</li><li>${arr["EmailId"]}</li><li>${arr["Message"]}</li>`;
+highScoreList.appendChild(highScoreList);
+  </script>
+<script src="Footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="nav_footer.css">
+<link rel="stylesheet" href="register.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4021172835390774"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <script src="NavBaar.js"></script>
+    <h2 style="text-align: center;font-size: 34px;font-style: italic;font-family: 'Times New Roman', Times, serif;color:crimson">Register</h2>     
+    <div class="Registerbody">
+        <form>
+          <h2 style="text-align: center;">Register</h2>
+          <label >Name</label>
+          <input id="username" type="Name" placeholder="name"/>
+          <label > Email</label>
+          <input id="email" type="email" placeholder="email"/>
+          <label >Create Password</label>
+          <input id="passord" type="password" placeholder="password" />
+
+          <button id="saveScoreBtn" type="submit"  onclick="saveHighScore(event)"disabled>Register</button>
+          <p style="margin-bottom: 40px;">Exiting User ?<a href="SignIn.html">SignIn</a></p>
+        </form>
+  <p></p>
+  </div>
+  <script>
+    const username = document.getElementById("username");
+const saveScoreBtn = document.getElementById("saveScoreBtn");
+
+// const mostRecentScore = localStorage.getItem("mostRecentScore");
+// const highScore= JSON.parse(localStorage.getItem("highScore")) || [];
+// finalScore.innerText = mostRecentScore;
+const emailId=document.getElementById("email");
+const passord=document.getElementById("passord");
+
+
+username.addEventListener('keyup',() => {
+    
+    saveScoreBtn.disabled = !username.value;
+
+});
+
+saveHighScore = e =>{
+    console.log("cliked the save button!");
+    e.preventDefault();
+    const score ={
+        //score:Math.floor(Math.random()*100),
+      
+ name: username.value,
+ EmailId: emailId.value,
+ Password: passord.value,
+ 
+    };
+    // highScore.push(score);
+    // highScore.sort((a,b) => b.score -a.score);
+    // highScore.splice(1);
+    
+    localStorage.setItem("score",JSON.stringify(score));
+    window.alert("your responce saved");
+    //window.location.assign("/highscore.html");
+
+};
+  </script>
+<script src="Footer.js"></script>
+</body>
+</html>
