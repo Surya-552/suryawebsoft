@@ -1,5 +1,5 @@
 function product(prd) {
-  let jumpTo=`/showPrd.html?id=${prd.id}`;
+  let jumpTo=`showPrd.html?id=${prd.id}`;
   return `<a  href=${jumpTo}>
 <div class="product_list">
      <div class="product_img"> <img src= ${prd.imgUrl} > </div>
