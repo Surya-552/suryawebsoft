@@ -1,18 +1,18 @@
 function nav_baar(imgUrl,imgUrl1) {
     return `
     <div class="header">
-              <a href="/index.html" class="logo">
+              <a href="index.html" class="logo">
               <img  src=${imgUrl}  />
             </a>
              <div class="header-right" id="MenuItem">
              <ul>
-                <li><a class="active" href="/index.html">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/Contact_us.html">Contact Us</a></li>
-                <li><a href="/Product.html">Shoping</a></li>
-                <li><a href="/SignIn.html">Sign In</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Contact_us.html">Contact Us</a></li>
+                <li><a href="Product.html">Shoping</a></li>
+                <li><a href="SignIn.html">Sign In</a></li>
             </ul>
-                <a href="/cart.html" class="cartimg">
+                <a href="cart.html" class="cartimg">
                 <img  src=${imgUrl1}  />
               </a>
             </div>
